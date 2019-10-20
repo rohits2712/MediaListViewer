@@ -1,0 +1,26 @@
+div{
+    border: 1px solid black;
+    width: 500px;
+}
+a.details {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: rgb(6, 170, 74);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+a.delete {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: rgb(187, 58, 18);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}

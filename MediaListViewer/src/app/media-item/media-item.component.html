@@ -1,0 +1,19 @@
+
+<!-- <div>{{name}}</div>
+<div [textContent] ="name"></div>  -->
+<div>{{mediaItem.name | slice: 0:11}}</div>
+<div>{{mediaItem.medium}}</div>
+<div>{{mediaItem.category}}</div>
+<div>{{mediaItem.year}}</div>
+<div>{{mediaItem.watchedOn | date : 'shortDate'}}</div>
+<div>{{mediaItem.isFavorite}}</div>
+
+<div class="tools">
+<a (click)="onDelete()" class="delete">
+    remove
+</a> 
+<a class="details">
+    watch
+</a>
+
+</div>
