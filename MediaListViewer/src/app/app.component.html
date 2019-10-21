@@ -3,6 +3,7 @@
     <h1>Media App</h1>
     <p class="description">Keeping track of the media I want to watch</p>
   </header>
+  <app-media-item-form></app-media-item-form>
   <div>{{mediaItems | categoryList}}</div>
   <app-media-item *ngFor="let mediaItem of mediaItems"
    (delete)="onMediaItemDelete($event)" [mediaItem]= "mediaItem"></app-media-item>
