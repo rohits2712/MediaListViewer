@@ -1,48 +1,19 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MediaItemService} from './media-item.service';
 
 @Component({
   selector:'app-root',
   templateUrl:'./app.component.html',
   styleUrls:['./app.component.css']
 })
-export class AppComponent{
-  mediaItems = [
-    {
-    id:1,
-    name: 'FireBug',
-    medium: 'Series',
-    category:'Science Fiction',
-    year:2020,
-    watchedOn: 1294166565384,
-    isFavorite:false
-  },{
-    id:2,
-    name: 'Jewel Thief',
-    medium: 'Series',
-    category:'Science Fiction',
-    year:2020,
-    watchedOn: 1294166565384,
-    isFavorite:false
-  },{
-    id:3,
-    name: 'Titanic',
-    medium: 'Movie',
-    category:'Science',
-    year:2020,
-    watchedOn: 1294166565384,
-    isFavorite:false
-  },{
-    id:4,
-    name: 'Halloway',
-    medium: 'Series',
-    category:'Science Fiction',
-    year:2020,
-    watchedOn: 1294166565384,
-    isFavorite:false
-  },
-]
-  
- onMediaItemDelete(mediaItem){
+export class AppComponent implements OnInit{
+ mediaItems;
+constructor(private mediaItemService : MediaItemService){}
+ngOnInit(){
+  this.mediaItems = this.mediaItemService.get();
+}
 
+ onMediaItemDelete(mediaItem){
+  this.mediaItemService.delete(mediaItem);
  }
 }
