@@ -24,7 +24,7 @@ export class AppComponent{
     watchedOn: 1294166565384,
     isFavorite:false
   },{
-    id:1,
+    id:3,
     name: 'Titanic',
     medium: 'Movie',
     category:'Science',
@@ -32,7 +32,7 @@ export class AppComponent{
     watchedOn: 1294166565384,
     isFavorite:false
   },{
-    id:1,
+    id:4,
     name: 'Halloway',
     medium: 'Series',
     category:'Science Fiction',
